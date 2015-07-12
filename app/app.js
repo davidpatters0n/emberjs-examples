@@ -2,7 +2,8 @@ import Ember from 'ember';
 import Resolver from 'ember/resolver';
 import loadInitializers from 'ember/load-initializers';
 import config from './config/environment';
-
+import inheritance from './inheritance';
+import timeManage from './time_manage';
 var App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
@@ -15,4 +16,11 @@ App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
+inheritance();
+
+var myTimeManager = timeManage.create({
+  time: 12
+});
+
+myTimeManager.set("time", 22)
 export default App;
