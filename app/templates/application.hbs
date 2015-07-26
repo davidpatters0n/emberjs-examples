@@ -1,3 +1,41 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-{{outlet}}
+{{!-- <header>
+  <h1>Ember.js Repo</h1>
+</header>
+ --}}
+{{!-- <div {{!bind-attr class="className"}}>{{!message}}</div> --}}
+{{!-- <h2 {{!action 'alert' 'something went wrong with the application template'}}>Company Information Brouchure</h2> --}}
+{{!-- <div> {{!#link-to 'about'}}About{{!/link-to}}</div>
+<div> {{!#link-to 'products'}}Products{{!/link-to}}</div>
+ --}}
+{{!-- <div>
+{{!outlet}}
+</div>
+<footer>
+ &copy; 2015 Ember.js Essentials
+</footer> --}}
+
+<div id="wrapper" class="active">
+    <!-- The Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul id="sidebar_menu" class="sidebar-nav">
+            <li class="sidebar-brand" {{action 'toggleMenu'}} ><a id="menu-toggle" href="#">Menu<span id="main_icon" class="fa fa-align-justify"></span></a></li>
+        </ul>
+        <ul class="sidebar-nav" id="sidebar">
+            {{outlet 'sidebar'}}
+        </ul>
+    </div>
+
+    <!-- Page content -->
+    <div id="page-content-wrapper">
+    <!-- Keep all page content within the page-content inset div! -->
+        <div class="page-content inset">
+        <div class="row">
+            <div class="col-md-12">
+                {{outlet}}
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

@@ -10,14 +10,14 @@ export default function(){
   var derivedObject = derived.create({
 
     derivedProperty: true
-    });
+  });
 
-  derived.reopen({derivedProperty: true})
+  derived.reopen({derivedProperty: true});
 
   var anotherDerivedObject = derived.create();
 
 
   console.log(derivedObject.get('baseProperty'));
   console.log(derivedObject.get('derivedProperty'));
-  console.log(anotherDerivedObject.get('derivedProperty'))
+  console.log(anotherDerivedObject.get('derivedProperty'));
 }

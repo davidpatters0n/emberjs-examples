@@ -1,0 +1,69 @@
+<!-- Example Chapter 3 - Example 5 -->
+{{!-- <table class='table table-striped'>
+  <thead>
+    <td>Company</td>
+    <td>Headquarters</td>
+    <td>Revenue</td>
+  </thead>
+  <tbody>
+    {{!#each model as |company|}}
+    <tr>
+      <td {{!action 'alert' company.name}}>{{!company.name}}</td>
+      <td {{!bind-attr class="className"}}>{{!company.headquarters}}</td>
+      <td {{!action 'alert' company.revenue}}>{{!company.revenue}}</td>
+    </tr>
+    {{!/each}}
+  </tbody>
+</table>
+<button class="btn btn default" {{!action "toggleColor"}}>Change Color</button>
+ --}}
+<!--Bind Attr will bind the attribute name given to the property accessible by
+    *controller OR view*
+-->
+<!-- ######### END Example Chapter 3 - Example 5 ######### -->
+
+<!-- Example Chapter 3 - Example 6 -->
+
+{{!-- <div>Hi Mr {{!firstName}} {{!lastName}}</div><br>
+<div>Last Name is disabled: {{!nameDisabled}}<br></div>
+<br>
+<div>First Name: {{!input value=firstName size=20}}</div><br>
+<div>Last Name: {{!input value=lastName disabled=nameDisabled}}</div>
+<br><br>
+<div>Enable last name? {{!input type="checkbox" checked=nameDisabled}}</div>
+
+{{!truncate "This is very very long and beyoung" length=20}}<br>
+{{!truncate "this is very long" length=10}}<br> --}}
+
+<!-- ######### END Example Chapter 3 - Example 6 ######### -->
+
+
+<!-- Example Chapter 4 - Example 4 -->
+
+
+<!-- Example Chapter 7 - Components -->
+{{!-- <p class="well lead"> This example demonstrate how to render different templates in different outlets.<br>Click on the Menu to Toggle Sidebar.</p>
+<p class="well lead">Click{{!#link-to 'about'}} Here{{!/link-to}} to Go To About Page Which has Different Sidebar Menu Items</p>
+ --}}
+{{!#product-description name="Product Name" MRP=model.MRP price=model.price sale=model.sale}}
+ {{!--  <ul>
+    <li>Info 1</li>
+    <li>Info 2</li>
+    <li>Info 3</li>
+  </ul> --}}
+
+{{!/product-description}}
+
+<!--######## END Chapter 7 ######### -->
+
+
+<!-- Mapping Components Actions to the rest of your application
+{{date-picker action="saveManufactoringDate"}} this action tells the component the name of the controller/route action that should be manually be triggered when used
+-->
+
+<div>Please set the product's manufactoring date : {{date-picker action="saveMaufactoringDate"}}</div>
+<br>
+<div>Please set the product's expiry date : {{date-picker action="saveExpiryDate"}}</div>
+<br>
+<div>The Manufactoring Date Set By You is {{manufactoringDate}}</div>
+<div>The Expiry Date Set By You is {{expiryDate}}</div>

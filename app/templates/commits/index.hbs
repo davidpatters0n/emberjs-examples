@@ -1,0 +1,6 @@
+<h2>Commits</h2>
+{{#each model as |commit|}}
+  <div><b><em>Sha</em>:</b> {{#link-to 'commits.commit' commit}}{{commit.sha}}{{/link-to}}</div>
+  <div><em>Author</em>: {{commit.author.namae}}</div>
+  <div><em>Commit</em>: {{commit.commit.message}}</div>
+{{/each}}

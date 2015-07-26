@@ -19,6 +19,11 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.contentSecurityPolicy = {
+  'connect-src': "'self' https://api.github.com", // Allow data (ajax/websocket) from api.github.com
+  'img-src': "'self' http://emberjs.com/images/logos/ember-logo.png"
+}
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;

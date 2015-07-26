@@ -1,0 +1,13 @@
+<p>
+This is a long text and we intend to show only this much unless the user presses the show more button below.
+</p>
+
+{{#if showMoreText}}
+  <p>
+    This is the reamining text that should be visible when we press the show more button. Ideally this should contain a lot more text, but for example's sake this should be enough
+  </p>
+  <br/><br/>
+  <button {{action 'toggleMore'}}>Toggle Less</button>
+{{else}}
+  <button {{action 'toggleMore'}}>Show More</button>
+{{/if}}
